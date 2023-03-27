@@ -1,0 +1,434 @@
+
+.btn:link,
+.btn:visited
+{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 600;
+    background-color: #996515;
+    color: #fff;
+    /* border: 1px solid #fff; */
+    padding: 1.6rem 3.2rem;
+    margin-top: 1.8rem;
+    border-radius: 9px;
+    transition: all 0.3s;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+    
+}
+
+.btn:hover,
+.btn:active{
+    
+    background-color: #7a5111;
+    color: #fff;  
+}
+
+.nav{
+    
+    list-style: none;
+    display: flex;
+    gap:4.8rem; 
+    align-items: center;
+}
+
+.nav button:last-child{
+    background-color: #996515;
+    border-radius: 9px;
+    padding: 1.2rem 2.4rem;
+    font-weight: 700;
+}
+
+.nav button:last-child:hover{
+    color: #111;
+}
+.logo-name{
+    font-weight: 700;
+    font-size: 2.4rem;
+}
+
+.NavButton{
+    font-family: inherit;
+    background: none;
+    text-decoration: none;
+    border: none;
+    color: #fff;
+    font-size: 2.4rem;
+    color: none;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+
+.NavButton:hover{
+   color: #e0d1b9;
+}
+
+.realEstate{
+    position: relative;
+}
+
+.realEstate a{
+    font-size: 2rem;
+    text-decoration: none;
+}
+
+.realEstate li{
+    
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+    font-weight: 600;
+    font-family: inherit;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.realEstate li:hover{
+    background-color: #996515;
+    color: #fff;
+}
+
+.realIcons{
+    height: 1.8rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 1rem;
+}
+.newOne{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+.realEstate ul{ 
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  background-color: #fff;
+  color: #111;
+  margin-top: 0.5rem;
+  width: 12rem;
+  height: 12rem;
+  justify-content: space-around;
+  align-items: center;
+  border-radius: 5px;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.4s ease;
+  transform: translateY(-1rem);
+}
+
+.realEstate button:focus +ul{
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+}
+
+.section-about-us{
+    background-color: #fff;
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+
+.Montoya-img{
+    width: 50%;
+}
+
+.Montoya-img-2{
+    width: 80%;
+    height: 100%;
+    border-radius: 9px;
+}
+.Montoya-img{
+    border-radius: 9px;
+}
+
+.Montoya-text{
+    font-size: 2.4rem;
+    line-height: 1.8; 
+ }
+.Montoya-icons{
+    color: #996515;
+    display: block;
+    font-size: 7.4rem;
+    margin-bottom:  1.2rem;
+}
+
+.Montoya-text-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+}
+.Montoya-picture-box{
+    display: flex;
+    align-items: center;
+    justify-content: center
+    
+}
+
+.Montoya-picture-box-2{
+    display: flex;
+    justify-content: start;
+}
+
+.section-plaque{
+    padding: 9.6rem 0;
+}
+
+
+
+.achieBox{
+    width: 50rem;
+    border: 1px solid #996515;
+    padding: 1.2rem 2.4rem;
+    border-radius: 9px;
+    cursor: pointer;
+    box-shadow: 0 3.2rem 6.4rem rgba(0,0,0,0.06);
+}
+
+.achieBox:hover{
+    background-color: #e0d1b9;
+    
+}
+
+.BoxAchievement{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.achivementTitle{
+    font-size: 3.6rem;
+    margin: 2.4rem 0;
+}
+.TextAchievement-box{
+    text-align: center;
+    margin: 2rem 0;
+}
+.TextAchievement{
+    font-size: 3rem;
+    
+}
+
+.AchieIcons{
+    color: #996515;
+    font-size: 4.4rem;
+    border: 1px solid #996515;
+    border-radius: 50px;
+    padding: 2.4rem 2.4rem;
+}
+
+.features-container{
+    padding: 0 9.6rem;
+}
+.section-features{
+    background-color:#f5f0e8;
+    padding: 9.6rem 0;;
+}
+
+
+.card-course{
+    width: 100%;
+    height: 100%;
+    position: relative;
+    overflow: hidden;
+    
+}
+.card-img{
+    width: 100%;
+    border-radius: 9px;
+    box-shadow: 0 3.2rem 6.4rem rgba(0,0,0,0.08);
+    object-fit: cover;
+    
+}
+
+.card-img2{
+    width: 100%;
+    height: 100%;
+    border-radius: 9px;
+    box-shadow: 0 3.2rem 6.4rem rgba(0,0,0,0.08);
+    
+   
+}
+
+.card-body{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: -100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #1f3d4738;
+    backdrop-filter: blur(5px);
+    border-radius: 6px;   
+    padding: 2.4rem;
+    transition: all 1.5s;
+}
+
+.card-course:hover .card-body{
+    right: 0;
+}
+.card-title{
+color: #fff;
+font-size: 4.4rem;
+margin-top: 2.4rem;
+margin-bottom: 2.4rem;
+}
+
+.card-info{
+    color: #fff;
+    font-size: 2.4rem;
+    margin: 6.2rem 0;
+    width:70% ;
+}
+
+.btn-btn:link,.btn-btn:visited{
+    display: inline-block;
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight: 700;
+    background-color: #fff;
+     width:25%;
+     color: #111;
+    /* border: 1px solid #fff; */
+    padding: 1.6rem 3.2rem;
+    margin-top: 1.8rem;
+    border-radius: 9px;
+    transition: all 0.3s;
+    cursor: pointer;
+    letter-spacing: 0.2rem;
+}
+
+.btn-btn:hover,.btn-btn:active{
+    background-color: #c2a373;
+}
+
+.section-contactUs{
+    background-color: #fff;
+    padding: 4.8rem 0 9.6rem 0;
+}
+
+.contactUs-box{
+    width: 50%;
+    height: auto;
+    margin:auto;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem;
+    background-color:#996515 ;
+    box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.2);
+    border-radius: 9px;
+    overflow: hidden;
+    
+}
+
+.contact-map{
+    width: 100%;
+    height: auto;
+    flex:50%;
+    border-radius: 9px;
+    overflow: hidden;
+}
+
+.contact-map iframe{
+    width: 100%;
+    height: 100%;
+}
+
+
+.contact-form{
+    padding: 3rem;
+    width: 100%;
+    height: auto;
+    flex:50%;
+}
+
+.contact-form h2{
+    font-size: inherit;
+   text-align: center;
+    font-size:3.6rem;
+    color: #fff;
+    margin-bottom: 1rem;
+
+} 
+
+.contact-form-text{
+    font-family: inherit;
+    width: 100%;
+    height: 4rem;
+    color: #000;
+    font-size: 2.4rem;
+    border: 0.1rem solid #bcbcbc;
+    border-radius: 50px;
+    outline: none;
+    margin-bottom: 2rem;
+    padding: 1.5rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.1); 
+}
+.contact-form-text::placeholder{
+    color: #aaa;
+}
+
+.contact-form-textarea{
+    width: 100%;
+    height: 13rem;
+    color: #000;
+    font-size: 2.4rem;
+    border: 0.1rem solid #bcbcbc;
+    border-radius: 10px;
+    outline: none;
+    margin-bottom: 3rem;
+    padding: 1.5rem;
+    box-shadow:0 1px 2px rgba(0,0,0,0.1); 
+
+}
+
+.contact-form-textarea::placeholder{
+    font-size: inherit;
+    color: #aaa;
+}
+
+.contact-form label{
+    font-size: inherit;
+   display: block;
+   font-size: 2rem;
+   font-weight: 500;
+   margin-bottom: 1.2rem;
+   color:#fff;
+}
+
+.contact-form-btn{
+    font-family: inherit;
+    letter-spacing: 0.1px;
+    width: 100%;
+    height: auto;
+    border: none;
+    outline: none;
+    font-size: 2rem;
+    border-radius: 50px;
+    background-color:#45260a;
+    color:#fdf2e9;
+    text-transform: uppercase;
+    padding: 1rem 0;
+    cursor: pointer;
+    margin-bottom: 2rem;
+    transition: all .3s;
+
+
+}
+
+.contact-form-btn:hover{
+    background-color: #c2a373;
+    color: #fff;
+}
