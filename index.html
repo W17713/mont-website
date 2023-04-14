@@ -13,6 +13,8 @@
     <link href="css/style.css" rel="stylesheet"/>
     <link href="css/general.css" rel="stylesheet"/>
     <link href="css/queries.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="cuform.js"></script>
 </head>
 <body>
     
@@ -224,7 +226,9 @@
         </div>
         <div class="contact-form">
             <h2>Contact us</h2>
-            <form>
+            <form action="postmail.php" method="post">
+                <div id="status">
+                </div>
                 <div>
                 <label for="Name">Full Name</label>
                 <input class="contact-form-text" id="Name" type="text" placeholder="John Smith" required/>
@@ -242,6 +246,7 @@
                 </div>
                
                 <input type="submit" name="Submit" class="contact-form-btn"/>
+
             </form>
         </div>
     </div>
