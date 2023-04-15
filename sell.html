@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Evaluate Your House</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700;900&family=Playfair+Display:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+    
+    <script src="script.js" defer></script>
+    <link href="css/style.css" rel="stylesheet"/>
+    <link href="css/general.css" rel="stylesheet"/>
+    <link href="css/queries.css" rel="stylesheet"/>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
+    <script src="sellform.js"></script>
+</head>
+
+<body>
+<div class="sell-page">
+    <header>
+        <img src="CompressedFabrice/DanielMontoyShots/logoo.png" class="Logoo"/>
+    <div class="options">
+       <a href="index.html" class="link">Home</a>
+        <div class="dropdown" data-dropdown>
+            <button class="link" data-dropdown-button>Real Estate<ion-icon name="caret-down-outline" class="icondr"></ion-icon></button>
+            <div class="dropdown-menu">
+                <a href="sell.html" target="_blank" class="link-dropdown">Sell</a>
+                <a href="https://danielmontoya.monumenttexashomesearch.com/" target="_blank" class="link-dropdown">Buy</a>
+            </div>
+        </div>
+            <a href="#" class="link lastchild">Features</a>
+    </div>
+    </header>
+
+    <div class="hero-text-box">
+        <p class="hero-Text-title">Home Valuation</p>
+        <p class="hero-text">How much is my home worth?</p>
+    </div>
+</div>
+
+<section class="selling">
+    <div class="containing">
+    <div class="text-selling-box">
+        <h1 class="text-selling-header">Your peronalized market valuation.</h1>
+        <p class="text-selling">Let's find the right valuation for your home!</p>
+    </div>
+
+    <div class="text-selling-form">
+        <div class="container-form">
+        <form action="postsellform.php" method="POST">
+            <textarea placeholder="Tell us about your situation..." id="description" maxlength="5000" class="Message-selling" required></textarea>
+            <select  id="Valuation-type" required>
+                <option value="">What type of property do you to value?</option>
+                <option value="Single Family">Single Family</option>
+                <option value="Multi Family">Multi Family</option>
+                <option value="Condo">Condo</option>
+                <option value="Townhouse">Townhouse</option>
+                <option value="Rental">Rental</option>
+                <option value="Commercial">Commercial</option>
+            </select>
+
+            <div class="beds-bathrooms">
+                <select id="Number-of-beds" required>
+                    <option value="">How many beds does it have?</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                </select>
+
+                <select id="Number-of-baths" required>
+                    <option value="">How many bathrooms</option>
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5+">5+</option>
+                </select>
+            </div>
+
+            <input type="text" class="address-line" id="address" maxlength="256" placeholder="Address Line 1" required/>
+            <input type="text" class="city-line" id="city" maxlength="256" placeholder="City" required/>
+            <div class="addressing">
+                <select id="State" required>
+                    <option value="">State</option>
+                    <option value="Alabama">Alabama</option>
+                    <option value="Alaska">Alaska</option>
+                    <option value="Arizona">Arizona</option>
+                    <option value="Arkansas">Arkansas</option>
+                    <option value="California">California</option>
+                    <option value="Colorado">Colorado</option>
+                    <option value="Connecticut">Connecticut</option>
+                    <option value="Delaware">Delaware</option>
+                    <option value="Florida">Florida</option>
+                    <option value="Goergia">Goergia</option>
+                    <option value="Hawaii">Hawaii</option>
+                    <option value="Idaho">Idaho</option>
+                    <option value="Illinois">Illinois</option>
+                    <option value="Indiana">Indiana</option>
+                    <option value="Iowa">Iowa</option>
+                    <option value="Kansas">Kansas</option>
+                    <option value="Kentucky">Kentucky</option>
+                    <option value="Louisiana">Louisiana</option>
+                    <option value="Maine">Maine</option>
+                    <option value="Maryland">Maryland</option>
+                    <option value="Massachussetts">Massachussetts</option>
+                    <option value="Michigan">Michigan</option>
+                    <option value="Minnesota">Minnesota</option>
+                    <option value="Mississipi">Mississipi</option>
+                    <option value="Missouri">Missouri</option>
+                    <option value="Montana">Montana</option>
+                    <option value="Nebraska">Nebraska</option>
+                    <option value="Nevada">Nevada</option>
+                    <option value="New Hampshire">New Hampshire</option>
+                    <option value="New Jersey">New Jersey</option>
+                    <option value="New Mexico">New Mexico</option>
+                    <option value="New York">New York</option>
+                    <option value="North Carolina">North Carolina</option>
+                    <option value="North Dakota">North Dakota</option>
+                    <option value="Ohio">Ohio</option>
+                    <option value="Oklahoma">Oklahoma</option>
+                    <option value="Oregon">Oregon</option>
+                    <option value="Pennsylvania">Pennsylvania</option>
+                    <option value="Rhode Island">Rhode Island</option>
+                    <option value="South Carolina">South Carolina</option>
+                    <option value="Tennesse">Tennesse</option>
+                    <option value="Texas">Texas</option>
+                    <option value="Utah">Utah</option>
+                    <option value="Vermont">Vermont</option>
+                    <option value="Virginia">Virginia</option>
+                    <option value="Washington">Washington</option>
+                    <option value="West Virginia">West Virginia</option>
+                    <option value="Wisconsin">Wisconsin</option>
+                    <option value="Wyoming">Wyoming</option>
+
+                    <input type="text" class="zipcode-line" id="zipcode" maxlength="256" placeholder="Zip Code" required/>
+                    
+                </select>
+            </div>
+            <input type="text" class="Name-line" id="name" maxlength="256" placeholder="Enter your name" required/>
+                <input type="text" class="email-line" id="email" maxlength="256" placeholder="Enter your email" required/>
+
+                 <input type="submit" value="Value Your Home" class="button-value"/> 
+        </form>
+    </div>
+    </div>
+    </div>
+</section>
+
+</div>
+       
+       
+
+       
+  
+
+ 
+<section class="evaluation">
+    <div class="evaluationText">
+
+    </div>
+
+    <div class="evaluation-form">
+
+    </div>
+</section>
+    
+</body>
+</html>

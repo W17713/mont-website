@@ -1,0 +1,72 @@
+<?php
+
+//require __DIR__ . '/vendor/autoload.php';   //twilio
+require 'vendor/autoload.php';
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+use Twilio\Rest\Client;
+
+
+
+$mail = new PHPMailer(true);
+
+$account_sid = getenv('TWILIO_ACCOUNT_SID');
+$auth_token = getenv('TWILIO_AUTH_TOKEN');
+
+// A Twilio number you own with SMS capabilities
+$twilio_number = "+15017122661";    //twilio number to send sms
+$to_number= '+15558675310';     //customer number to receive sms
+
+$client = new Client($account_sid, $auth_token);
+
+function sendmessage($message,$whichform){
+    if(strlen($message)<160){
+        //send same text message that was received
+        $messagetoSend=$message;
+    }else{
+        //send mail
+        try {
+            $mail->SMTPDebug = 2;									
+            $mail->isSMTP();										
+            $mail->Host	 = 'smtp.gfg.com;';				
+            $mail->SMTPAuth = true;							
+            $mail->Username = 'user@gfg.com';				
+            $mail->Password = 'password';					
+            $mail->SMTPSecure = 'tls';							
+            $mail->Port	 = 587;
+        
+            $mail->setFrom('from@gfg.com', 'Name');		
+            $mail->addAddress('receiver1@gfg.com');
+            
+            
+            $mail->isHTML(false);   //change to true for HTML body								
+            $mail->Subject = "New Lead: Website Submission, ".$whichform;
+            //$mail->Body = 'HTML message body in <b>bold</b> ';
+            $mail->Body = $message;
+            //$mail->AltBody = $message;
+            $mail->send();
+            echo "Mail has been sent successfully!";
+            $messagetoSend="You have received a new lead: Website Submission, Contact Us Form";
+        } catch (Exception $e) {
+            echo "Message could not be sent. Mailer Error: {$mail->ErrorInfo}";
+        }
+        $client->messages->create(
+            // Where to send a text message (your cell phone?)
+            $to_number,
+            array(
+                'from' => $twilio_number,
+                'body' => $messagetoSend
+            )
+        );
+    }
+}
+
+
+?>
+
+
+
+
+
+
