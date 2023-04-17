@@ -1,10 +1,27 @@
+/* Mobile Navigation*/
+.icon-mobile-nav{
+    height: 4.4rem;
+    width: 4.4rem;
+    color: #000;
+    
+}
 
+.btn-mobile-nav{
+    border: none;
+    background: none;
+    cursor: pointer;
+    display: none;
+}
+
+.icon-mobile-nav[name="close-outline"]{
+    display: none;
+}
 .btn:link,
 .btn:visited
 {
     display: inline-block;
     text-decoration: none;
-    font-size: 2.6rem;
+    font-size: 1.8rem;
     font-weight: 600;
     background-color: #1a254f;
     color: #fff;
@@ -29,12 +46,13 @@
 
 .section-about-us{
     background-color: #fff;
-    padding: 4.8rem 0 9.6rem 0;
+    padding: 4.8rem
+     9.6rem;
 }
 
 
 .Montoya-img-2{
-    width: 80%;
+    width: 100%;
     height: 100%;
     border-radius: 9px;
 }
@@ -43,13 +61,13 @@
 }
 
 .Montoya-text{
-    font-size: 2.4rem;
+    font-size: 1.6rem;
     line-height: 1.8; 
  }
 .Montoya-icons{
     color: #4d5676;
     display: block;
-    font-size: 7.4rem;
+    font-size: 5.2rem;
     margin-bottom:  1.2rem;
 }
 
@@ -63,6 +81,8 @@
 .Montoya-picture-box-2{
     display: flex;
     justify-content: start;
+    width: 80%;
+    height: auto;
 }
 
 .section-plaque{
@@ -72,8 +92,8 @@
 
 /* #caccd6 */
 .achieBox{
-    width: 67rem;
-    height: 60em;
+    width:40rem;
+    height: 35rem;
     border: 1px solid #5f6784;
     padding: 1.2rem 2.4rem;
     border-radius: 9px;
@@ -174,25 +194,26 @@
 }
 .card-title{
 color: #fff;
-font-size: 4.4rem;
-margin-top: 2.4rem;
+font-size: 2.4rem;
+margin-top: 0rem;
 margin-bottom: 2.4rem;
 }
 
 .card-info{
     color: #fff;
-    font-size: 2.4rem;
-    margin: 6.2rem 0;
+    font-size: 1.5rem;
+    margin:0rem 0;
     width:70% ;
 }
 
 .btn-btn:link,.btn-btn:visited{
     display: inline-block;
     text-decoration: none;
-    font-size: 2rem;
+    font-family: inherit;
+    font-size: 1rem;
     font-weight: 700;
     background-color: #fff;
-     width:25%;
+     width:36%;
      color: #111;
     /* border: 1px solid #fff; */
     padding: 1.6rem 3.2rem;
@@ -204,20 +225,22 @@ margin-bottom: 2.4rem;
 }
 
 .btn-btn:hover,.btn-btn:active{
-    background-color: #c2a373;
+    background-color: #5f6784;
 }
 
 .section-contactUs{
+    width: auto;
+    height: 40rem;
     background-color: #fff;
     padding: 4.8rem 0 9.6rem 0;
 }
 
 .contactUs-box{
-    width: 50%;
-    height: auto;
+    width: 60%;
+    height:auto;
     margin:auto;
     display: flex;
-    flex-wrap: wrap;
+    /* flex-wrap: wrap; */
     padding: 1rem;
     background-color:#1a254f ;
     box-shadow: 0 2.4rem 4.8rem rgba(0,0,0,0.2);
@@ -243,21 +266,21 @@ margin-bottom: 2.4rem;
 .contact-form{
     padding: 3rem;
     width: 100%;
-    height: auto;
+    height: 100%;
     flex:50%;
 }
 
 .contact-form h2{
     font-size: inherit;
    text-align: center;
-    font-size:3.6rem;
+    font-size:2.4rem;
     color: #fff;
     margin-bottom: 1rem;
 
 } 
 
 .Aboutust{
-    width: 100%;
+    width: auto;
     display: flex;
     gap: 2rem;
     }
@@ -267,12 +290,12 @@ margin-bottom: 2.4rem;
 .contact-form-text{
     font-family: inherit;
     width: 100%;
-    height: 4rem;
+    height: 1rem;
     color: #000;
     font-size: 2.4rem;
     border: 0.1rem solid #bcbcbc;
     outline: none;
-    margin-bottom: 2rem;
+    margin-bottom: 1rem;
     padding: 1.5rem;
     box-shadow:0 1px 2px rgba(0,0,0,0.1); 
 }
@@ -285,7 +308,7 @@ margin-bottom: 2.4rem;
 }
 .contact-form-textarea{
     width: 100%;
-    height: 13rem;
+    height: 8rem;
     color: #000;
     font-size: 2.4rem;
     border: 0.1rem solid #bcbcbc;
@@ -295,6 +318,15 @@ margin-bottom: 2.4rem;
     box-shadow:0 1px 2px rgba(0,0,0,0.1); 
 
 }
+
+#interest,
+#location
+{
+    height:2.4rem;
+    width: 100%;
+}
+
+
 
 .Locatiion{
     width: 100%;
@@ -321,12 +353,13 @@ margin-bottom: 2.4rem;
 .contact-form-textarea::placeholder{
     font-size: inherit;
     color: #aaa;
+    font-size: 
 }
 
 .contact-form label{
     font-size: inherit;
    display: block;
-   font-size: 2rem;
+   font-size: 1.3rem;
    font-weight: 500;
    margin-bottom: 1.2rem;
    color:#fff;
@@ -336,7 +369,7 @@ margin-bottom: 2.4rem;
     font-family: inherit;
     letter-spacing: 0.1px;
     width: 100%;
-    height: auto;
+    height: 4rem;
     border: none;
     outline: none;
     font-size: 2rem;

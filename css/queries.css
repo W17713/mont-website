@@ -1,5 +1,165 @@
-@media(max-width:){
-    .section-hero{
 
+/* Smaller computer*/
+@media(max-width: 84em){
+    .hero-text{
+        width: 50%;
+        padding-left: 2rem;
+    }
+
+    .Montoya-picture-box-2{
+        
+        width: 80%;
+        height: auto;
+    }
+
+    .hero-text{
+        margin-left: 1rem;
+    }
+
+    .Container2{
+        max-width: 100rem;
+    }
+    
+    .achieBox{
+        width:30rem;
+        height: 25rem;
     }
 }
+
+@media(max-width: 78em){
+    .link{
+        font-size: 1.4rem;
+        
+    }
+
+    .Montoya-picture-box-2{
+        
+        width: 80%;
+        height: auto;
+    }
+    
+    .Logoo{
+        width:50% ;
+    }
+
+    .Montoya-text{
+        font-size: 1.2rem;
+    }
+    
+    .heading-secondary{
+        font-size:2.4rem;
+    }
+    .heading-tertiary{
+        font-size: 2.0rem;
+    }
+    /* .Montoya-picture-box-2{
+        
+        width: 0%;
+        height: auto;
+    } */
+
+    .Container2{
+        max-width: 100rem;
+    }
+
+    .achieBox{
+        width:25rem;
+        height: 20rem;
+    }
+    
+}
+
+@media(max-width: 73em){
+
+    html{
+        font-size: 56.25%;
+    }
+
+    .link{
+        font-size: 1rem;
+    }
+
+    .heading-primary{
+        font-size: 3.6rem;
+    }
+
+    .heading-text{
+        font-size: 1.2rem;
+    }
+
+    .btn:link,
+    .btn:visited{
+        font-size: 1.2rem;
+    }
+
+    .Montoya-text{
+        font-size: 1.2rem;
+    }
+    
+    .heading-secondary{
+        font-size:2.4rem;
+    }
+    .heading-tertiary{
+        font-size: 2.0rem;
+    }
+    .Montoya-picture-box-2{
+        
+        width: 80%;
+        height: auto;
+    }
+
+    .Container2{
+        max-width: 100rem;
+    }
+    
+}
+
+@media(max-width: 59em){
+    html{
+        font-size: 50%;
+    }
+
+    .btn-mobile-nav{
+        display: block;
+    }
+
+    .options{
+        background-color: #fff;
+        position: absolute;
+        width: 100%;
+        height: 100vh;
+        transform: translateX(100%);
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;  
+        transition: all 0.5s ease-in;
+
+        opacity: 0;
+        pointer-events: none;
+        visibility: hidden;
+    }
+
+    .nav-open .options{
+        opacity: 1;
+        pointer-events: auto;
+        visibility: visible;
+        transform: translateX(0);
+    }
+
+    .nav-open .icon-mobile-nav[name="close-outline"]{
+        display: block;
+    }
+
+    .nav-open .icon-mobile-nav[name="menu-outline"]{
+        display: none;
+    }
+
+    .link{
+        color: black;
+        font-size: 2.4rem;
+    }
+}
+
