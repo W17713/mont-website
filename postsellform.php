@@ -1,9 +1,13 @@
 <?php
-include "sendmail.php";
+//include "sendmail.php";
 // define variables and set to empty values
+ini_set('display_errors', 1);
+ini_set('display_startup_errors', 1);
+error_reporting(E_ALL);
+
 $errors=[];
 $data=[];
-$name = $email = $message = $phone = $location = $interest ="";
+$name = $description = $email = $address = $valuation = $beds = $city = $zipcode = $state = $baths ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
@@ -20,15 +24,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           }
 
       if (!empty($_POST["valuation"])) {
-        $beds = test_input($_POST["Valuation-type"]);
+        $valuation = test_input($_POST["valuation"]);
           }
 
     if (!empty($_POST["beds"])) {
-    $beds = test_input($_POST["Number-of-beds"]);
+    $beds = test_input($_POST["beds"]);
       }
 
     if (!empty($_POST["baths"])) {
-        $beds = test_input($_POST["Number-of-baths"]);
+        $baths = test_input($_POST["baths"]);
           }
 
     if (!empty($_POST["email"])) {
@@ -53,13 +57,13 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       }
 
       if (!empty($_POST["zipcode"])) {
-        $address = test_input($_POST["zipcode"]);
+        $zipcode = test_input($_POST["zipcode"]);
       }else{
           $errors["zipErr"]="address field cannot be empty";
       }
 
     if (!empty($_POST["state"])) {
-      $name = test_input($_POST["state"]);
+      $state = test_input($_POST["state"]);
     }
 
 
@@ -82,7 +86,7 @@ if ($conn->connect_error) {
   die("Connection failed: " . $conn->connect_error);
 }
 
-$sql = "INSERT INTO house VALUES ('$desctiption', '$valuation','$beds','$baths','$address','$city', '$state','$zipcode','$name','$email')";
+$sql = "INSERT INTO house VALUES ('$description', '$valuation','$beds','$baths','$address','$city', '$state','$zipcode','$name','$email')";
 
 if ($conn->query($sql) === TRUE) {
   $data['success'] = true;
@@ -95,7 +99,9 @@ $conn->close();
 
 
 
-echo json_encode($data);
+
+}
+}
 
 function test_input($fielddata) {
   $fielddata = trim($fielddata);
@@ -103,4 +109,6 @@ function test_input($fielddata) {
   $fielddata = htmlspecialchars($fielddata);
   return $fielddata;
 }
+
+echo json_encode($data);
 ?>

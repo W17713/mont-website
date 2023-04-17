@@ -12,6 +12,8 @@ $(document).ready(function () {
         name: $("#name").val(),
         email: $("#email").val(),
         };
+        
+        console.log(formData);
     
         $.ajax({
         type: "POST",
@@ -90,6 +92,7 @@ $(document).ready(function () {
             );
           }
         }).fail(function (data) {
+          console.log(data);
           $("form").html(
             '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
           );
