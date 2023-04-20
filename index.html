@@ -14,13 +14,16 @@
     <link href="css/style.css" rel="stylesheet"/>
     <link href="css/general.css" rel="stylesheet"/>
     <link href="css/queries.css" rel="stylesheet"/>
+    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <script src="cuform.js"></script>
+    <!-- <script src="cuform.js"></script> -->
+    
 </head>
 <body>
     
     <section class="section-hero">
-    <header class="nav-open">
+    <header class=" header nav-open">
         <img src="CompressedFabrice/DanielMontoyShots/logoo.png" class="Logoo"/>
     <div class="options">
        <a href="index.html" class="link">Home</a>
@@ -46,7 +49,7 @@
         
         <h1 class="heading-primary"> Find Your new Home</h1>
         <p class="heading-text">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Dolor odit aut placeat ea reiciendis quae nemo, quas, laboriosam doloremque saepe tempora qui possimus nihil explicabo obcaecati impedit excepturi magni id</p>
-        <a href="#" class="btn">Contact Us</a>
+        <a href="#COntact" class="btn">Contact Us</a>
     </div>
 
         <video src="CompressedFabrice/NewHeaderCompressed.mp4" muted loop autoplay></video>
@@ -79,9 +82,7 @@
         <img src="CompressedFabrice/DanielMontoyShots/aboutUs1.png" alt="A picture of David Montoya" class="Montoya-img-2"/>
     </div>
 
-    <div class="Montoya-picture-box-2">
-        <img src="CompressedFabrice/DanielMontoyShots/home.jpg" alt="A picture of David Montoya" class="Montoya-img-2"/>
-    </div>
+
 
     <div class="Montoya-text-box">
         <ion-icon name="home-outline" class="Montoya-icons"></ion-icon>
@@ -91,7 +92,13 @@
         totam commodi minus cupiditate nihil nulla. Eveniet recusandae doloremque, sint accusantium neque voluptas!
     </p>
 
-</div>
+  </div>
+  
+    <div class="Montoya-picture-box-2">
+        <img src="CompressedFabrice/DanielMontoyShots/home.jpg" alt="A picture of David Montoya" class="Montoya-img-2"/>
+    </div>
+
+    
 
 <div class="Montoya-text-box">
     <ion-icon name="ribbon-outline" class="Montoya-icons"></ion-icon>
@@ -106,7 +113,7 @@
 <div class="Montoya-picture-box-2">
 <img src="CompressedFabrice/DanielMontoyShots/AboutUs2.png" alt="A picture of David Montoya" class="Montoya-img-2"/>
 </div>
-    </div>
+ </div>
 </section>
 
 <section class="section-features">
@@ -192,8 +199,8 @@
         
     </div>
 </section>
-    
-<section class="section-contactUs">
+
+<section class="section-contactUs" id="COntact">
     <div class="contactUs-box">
         <div class="contact-map">
             <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3371.7121016513615!2d-102.55060368451078!3d32.319587514474094!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x86fb8e8bed51b3f7%3A0xbc4a9e0575e3910f!2s201%20NW%201st%20St%20STE%201%2C%20Andrews%2C%20TX%2079714!5e0!3m2!1sen!2sus!4v1679680211943!5m2!1sen!2sus" width="100%" height="auto" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
@@ -232,7 +239,7 @@
                     </div>
 
                     <div class="Selection-Box">
-                    <label for="location">Where are you located?</label>
+                    <label for="location">Which city are you located?</label>
                     <select id="location">
                         <option value=""></option>
                         <option value="Andrews">Andrews</option>
@@ -254,7 +261,63 @@
         </div>
     </div>
     
+    <footer class="footer">
+        <div class="container grid grid--footer">
+
+          <div class="logo-col">
+            <!-- <a href="#" class="footer-logo">
+              <img class="logo" alt="Omnifood logo" src="img/omnifood-logo.png" />
+            </a> -->
+
+            <ul class="social-links">
+              <li><a  href="https://www.instagram.com/danielmsellstx/" class="footer-link"><ion-icon name="logo-instagram" class="social-icon"></ion-icon></a></li>
+              <li><a  href="https://www.facebook.com/search/top/?q=Daniel%20Montoya-%20Real%20Estate%20Agent" class="footer-link"><ion-icon name="logo-facebook" class="social-icon"></ion-icon></a></li>
+            </ul>
+
+            <p class="copyright"> Copyright &copy; 2023 by Saddam Mevo in April reserved</p>
+          </div>
+          <div class="address-col">
+            <p class="footer-heading">Contact us</p>
+            <address class="contacts">
+              <p class="address">201 NW 1st St, Andrews, TX 79714</p>
+              <p>
+                <a href="tel:415-201-6370" class="footer-link">4325562923</a><br/>
+                <a href="mailto:hello@omnifood.com" class="footer-link">Danielmontoya03@gmail.com</a>
+              </p>
+            
+            </address>
+            
+           </div>
+
+          <nav class="nav-col">
+            <p class="footer-heading">Ressources</p>
+            <ul class="footer-nav">
+              <li><a target="_blank" href="https://www.utilityconnect.net/danielmontoya" class="footer-link">Create Utilities</a></li>
+              <li ><a target="_blank" href="https://myloan.monumentsquaremortgage.com/homehub/signup/f2302d83?from_mobile_share=true" class="footer-link">Get Approved</a></li> 
+              <li ><a href="#" class="footer-link">Privacy & terms</a></li>
+            </ul>
+            
+          </nav>
+
+          <nav class="nav-col">
+            <p class="footer-heading">Real Estate</p>
+            <ul class="footer-nav">
+              <li ><a href="https://danielmontoya.monumenttexashomesearch.com/" class="footer-link" target="_blank">Buy</a></li>
+              <li ><a href="sell.html" class="footer-link" target="_blank">Sell</a></li>
+              
+            </ul>
+
+          </nav>
+         
+         
+         
+
+        </div>
+
+      </footer>
 </section>
+
+
 
 <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
 <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>

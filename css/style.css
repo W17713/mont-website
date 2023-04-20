@@ -46,8 +46,7 @@
 
 .section-about-us{
     background-color: #fff;
-    padding: 4.8rem
-     9.6rem;
+    padding: 4.8rem 9.6rem;
 }
 
 
@@ -81,7 +80,7 @@
 .Montoya-picture-box-2{
     display: flex;
     justify-content: start;
-    width: 80%;
+    width: 60%;
     height: auto;
 }
 
@@ -395,7 +394,7 @@ margin-bottom: 2.4rem;
     display: flex;
     margin-left: auto;
     margin-right: auto;
-    max-width: 200rem;
+    max-width: 150rem;
     padding-top: 8rem;
     justify-content: space-between;
 }
@@ -425,7 +424,7 @@ flex-direction: column;
     font-family: inherit;
     font-size: 2.2rem;
     width: 100%;
-    height: 17rem;
+    height: 9rem;
     margin-bottom: 2rem;
     padding-top: 2rem;
     padding-bottom: 2rem; 
@@ -447,7 +446,7 @@ flex-direction: column;
 #Valuation-type{
     font-size: 2.4rem;
     font-family: inherit;
-    height: 10rem;
+    height: 7rem;
     margin-bottom: 2rem;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
     padding-left: 1rem;
@@ -460,7 +459,7 @@ flex-direction: column;
 }
 #Number-of-beds{
     width: 50%;
-    height: 9rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -469,7 +468,7 @@ flex-direction: column;
 
 #Number-of-baths{
     width: 50%;
-    height: 9rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -477,7 +476,7 @@ flex-direction: column;
 }
 .address-line{
     margin-bottom: 2rem;
-    height: 10rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -486,7 +485,7 @@ flex-direction: column;
 
 .city-line{
     margin-bottom: 2rem;
-    height: 10rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -499,7 +498,7 @@ flex-direction: column;
 }
 #State{
     width: 50%;
-    height: 9rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -508,7 +507,7 @@ flex-direction: column;
 
 .zipcode-line{
     width: 50%;
-    height: 9rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -517,7 +516,7 @@ flex-direction: column;
 
 .Name-line{
     margin-bottom: 2rem;
-    height: 10rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -525,7 +524,7 @@ flex-direction: column;
 }
 
 .email-line{
-    height: 10rem;
+    height: 7rem;
     font-size: 2.4rem;
     font-family: inherit;
     box-shadow:0 1px 2px rgba(0,0,0,0.4);
@@ -536,7 +535,7 @@ flex-direction: column;
 .button-value{
     font-family: inherit;
     text-transform: uppercase;
-    height: 8rem;
+    height: 7rem;
     font-size: 2.4rem;
     background-color: #000d3b;
     color:#fff;
