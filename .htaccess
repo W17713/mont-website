@@ -1,0 +1,11 @@
+RewriteEngine On
+RewriteRule / index.html
+
+RewriteRule /contactus /#COntact 
+
+RewriteRule /sell sell.html
+
+<FilesMatch "myphpconfigs.php$">
+Order deny,allow
+Deny from all
+</FilesMatch>

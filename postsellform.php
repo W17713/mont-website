@@ -1,5 +1,5 @@
 <?php
-//include "sendmail.php";
+include "sendmail.php";
 // define variables and set to empty values
 ini_set('display_errors', 1);
 ini_set('display_startup_errors', 1);
@@ -8,6 +8,8 @@ error_reporting(E_ALL);
 $errors=[];
 $data=[];
 $name = $description = $email = $address = $valuation = $beds = $city = $zipcode = $state = $baths ="";
+$form = "Sell";
+$msg2send ="";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if (empty($_POST["name"])) {
@@ -73,10 +75,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 } else {
 
 
-  $servername = "localhost";
-  $username = "root";
-  $password = "";
-  $dbname = "dm_db";
+  $servername = getenv('servername');
+  $username = getenv('username');
+  $password = getenv('password');
+  $dbname = getenv('dbname');
 
 // Create connection
   $conn = new mysqli($servername, $username, $password, $dbname);
@@ -90,17 +92,19 @@ $sql = "INSERT INTO house VALUES ('$description', '$valuation','$beds','$baths',
 
 if ($conn->query($sql) === TRUE) {
   $data['success'] = true;
-  $data['message'] = 'Success!';
+  $data['message'] = 'Form successfully submitted!';
 } else {
   $error["connErr"]= "Error: ".$conn->error;
 }
 
 $conn->close();
 
-
+$msg2send ="Name: ".$name."\n"."Email: ".$email."\n"." Valuation for ".$beds." beds, ".$baths." baths ".$valuation." at ".$city; 
 
 
 }
+echo json_encode($data);
+sendmessage($msg2send,$form);
 }
 
 function test_input($fielddata) {
@@ -110,5 +114,5 @@ function test_input($fielddata) {
   return $fielddata;
 }
 
-echo json_encode($data);
+
 ?>

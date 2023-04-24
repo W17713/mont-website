@@ -14,10 +14,58 @@
     <link href="css/style.css" rel="stylesheet"/>
     <link href="css/general.css" rel="stylesheet"/>
     <link href="css/queries.css" rel="stylesheet"/>
-    <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
-    <link rel="stylesheet" type="text/css" href="dist/sweetalert.css">
+    <!--<script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>-->
+    <!--<link rel="stylesheet" type="text/css" href="dist/sweetalert.css">-->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
-    <!-- <script src="cuform.js"></script> -->
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/jquery.validate.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/jquery.validation/1.16.0/additional-methods.min.js"></script>
+    <script src="cuform.js"></script> 
+    <!--<script>
+        $().ready(function () {
+          $("#cs-form").validate({
+    // in 'rules' user have to specify all the constraints for respective fields
+    rules: {
+
+      Name: {
+        required: true,
+        minlength: 2 //for length of lastname
+      },
+      number: {
+        required: true,
+        minlength: 10
+      },
+      Message: {
+        required: true,
+        maxlength: 500,
+      },
+      email: {
+        required: true,
+        email: true
+      },
+    },
+    // in 'messages' user have to specify message as per rules
+    messages: {
+
+      Name: {
+        required: " Please enter a name",
+        minlength: " Your username must consist of at least 2 characters"
+      },
+      number: {
+        required: " Please enter a phone number",
+        minlength: " Your phone number must be at least 10 digits"
+      },
+      Message: {
+        required: " Please enter a message",
+        maxlength: " Your message must be consist of at most 500 characters"
+      },
+      email: {
+        required: " Please enter an email address",
+        email: "Email address is not in the correct format"
+      }
+    }
+  });
+});
+    </script>-->
     
 </head>
 <body>
@@ -208,25 +256,29 @@
         </div>
         <div class="contact-form">
             <h2>Contact us</h2>
-            <form action="postmail.php" method="POST">
+            <form id="cs-form" action="postmail.php" method="POST">
+            <div id="response"></div>
             <div class="Aboutust">
-                <div class="ABoutUs-box" >
+                <div class="ABoutUs-box" id="name" >
                 <label for="Name" id="Naming">Full Name</label>
                 <input class="contact-form-text" id="Name" type="text" placeholder="John Smith" required/>
+                <div id="namestatus"></div>
                </div>
 
-                <div class="ABoutUs-box">
+                <div class="ABoutUs-box" id="num">
                     <label for="number">Phone No.</label>
-                    <input class="contact-form-text" type="text" id="number" placeholder="888-888-8888" required/>
+                    <input class="contact-form-text" type="text" id="number" placeholder="8888888888" required/>
+                    <div id="numstatus"></div>
                 </div>
             </div>
 
             <div>
                 <label for="email">Email address</label>
                 <input class="contact-form-text" id="email" type="text" placeholder="me@example.com" required/>
+                <div id="emailstatus"></div>
             </div>
 
-                <div class="Locatiion">
+                <div class="Locatiion" id="int">
                     <div class="Selection-Box">
                     <label for="interest">What are you interested in?</label>
                     <select id="interest">
@@ -237,8 +289,9 @@
                         <option value="New Construction">New Construction</option>
                     </select>
                     </div>
+                    
 
-                    <div class="Selection-Box">
+                    <div class="Selection-Box" id="loc">
                     <label for="location">Which city are you located?</label>
                     <select id="location">
                         <option value=""></option>
@@ -249,13 +302,17 @@
                         <option value="Others">Others</option>
                     </select>
                     </div>
+                    
                 </div>
-                <div>
+                <div id="intstatus"></div>
+                <div id="locstatus"></div>
+                <div id="msg">
                 <label for="Message">Message</label>
                 <textarea class="contact-form-textarea" id="Message" placeholder="Message" required></textarea>
+                <div id="msgstatus"></div>
                 </div>
                
-                <input type="submit" name="Submit" class="contact-form-btn"/>
+                <input id="submitform" type="submit" name="Submit" class="contact-form-btn"/>
 
             </form>
         </div>
@@ -282,7 +339,7 @@
               <p class="address">201 NW 1st St, Andrews, TX 79714</p>
               <p>
                 <a href="tel:415-201-6370" class="footer-link">4325562923</a><br/>
-                <a href="mailto:hello@omnifood.com" class="footer-link">Danielmontoya03@gmail.com</a>
+                <a href="mailto:danielmontoya03@gmail.com" class="footer-link">Danielmontoya03@gmail.com</a>
               </p>
             
             </address>

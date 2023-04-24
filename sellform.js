@@ -87,13 +87,24 @@ $(document).ready(function () {
                 );
               }
           } else {
-            $("form").html(
+            $("#response").empty().append(
               '<div class="alert alert-success">' + data.message + "</div>"
             );
+            $("#description").val('');
+            $("#Valuation-type").val('');
+            $("#Number-of-beds").val('');
+            $("#Number-of-baths").val('');
+            $("#address").val('');
+            $("#city").val('');
+            $("#State").val('');
+            $("#zipcode").val('');
+            $("#name").val('');
+            $("#email").val('');
+
           }
         }).fail(function (data) {
           console.log(data);
-          $("form").html(
+          $("#response").empty().append(
             '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
           );
         });

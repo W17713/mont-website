@@ -1,5 +1,8 @@
 $(document).ready(function () {
+
+  
 $("form").submit(function (event) {
+
 var formData = {
     Name: $("#Name").val(),
     phonenumber: $("#number").val(),
@@ -8,7 +11,7 @@ var formData = {
     location: $("#location").val(),
     Message: $("#Message").val(),
     };
-
+    console.log(formData);
     $.ajax({
     type: "POST",
     url: "postmail.php",
@@ -20,48 +23,61 @@ var formData = {
     if (!data.success) {
         if (data.errors.NameErr) {
           //$("#name-group").addClass("has-error");
-          $("#Name").append(
+          $("#namestatus").empty().append(
             '<div class="help-block">' + data.errors.NameErr + "</div>"
           );
         }
 
         if (data.errors.numberErr) {
           //$("#name-group").addClass("has-error");
-          $("#number").append(
+          $("#numstatus").empty().append(
             '<div class="help-block">' + data.errors.numberErr + "</div>"
           );
         }
   
         if (data.errors.emailErr) {
-          $("#email").append(
+          $("#emailstatus").empty().append(
             '<div class="help-block">' + data.errors.emailErr + "</div>"
           );
         }
 
         if (data.errors.interestErr) {
-          $("#interest").append(
+          $("#intstatus").empty().append(
             '<div class="help-block">' + data.errors.interestErr + "</div>"
           );
         }
 
         if (data.errors.locationErr) {
-          $("#location").append(
+          $("#locstatus").empty().append(
             '<div class="help-block">' + data.errors.locationErr + "</div>"
           );
         }
   
         if (data.errors.msgErr) {
-          $("#Message").append(
+          $("#msgstatus").empty().append(
             '<div class="help-block">' + data.errors.msgErr + "</div>"
           );
         }
       } else {
-        $("form").html(
+        $("#response").empty().append(
           '<div class="alert alert-success">' + data.message + "</div>"
         );
+        $("#Name").val('');
+        $("#number").val('');
+        $("#email").val('');
+        $("#interest").val('');
+        $("#location").val('');
+        $("#Message").val('');
+        $("#namestatus").val('');
+        $("#numstatus").val('');
+        $("#emailstatus").val('');
+        $("#intstatus").val('');
+        $("#locstatus").val('');
+        $("#msgstatus").val('');
       }
     }).fail(function (data) {
-      $("form").html(
+      console.log(data);
+      $("#response").empty().append(
         '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
       );
     });
