@@ -60,7 +60,7 @@ var formData = {
         }
       } else {
         $("#response").empty().append(
-          '<div class="alert alert-success">' + data.message + "</div>"
+          '<span class="styling">' + data.message + "</span>"
         );
         $("#Name").val('');
         $("#number").val('');
