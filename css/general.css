@@ -357,7 +357,7 @@ header{
 }
 
 .grid--2-cols{
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: 1fr 1fr;
 }
 
 .grid--3-cols{

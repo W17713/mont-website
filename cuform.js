@@ -60,7 +60,11 @@ var formData = {
         }
       } else {
         $("#response").empty().append(
+<<<<<<< HEAD
           '<span style=" font-size: 2em;text-align:center;color:white;">' + data.message + "</span>"
+=======
+          '<span class="styling">' + data.message + "</span>"
+>>>>>>> 02b604b234bac2a47814bbc814cd7558c8e57507
         );
         $("#Name").val('');
         $("#number").val('');

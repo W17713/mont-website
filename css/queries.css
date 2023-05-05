@@ -346,10 +346,7 @@
     }
 }
 @media(max-width: 59em){
-    .grid{
-        display: flex;
-        flex-direction: column;
-    }
+   
 
     .containing{
         display: flex;
@@ -392,6 +389,7 @@
         pointer-events: none;
         visibility: hidden;
     }
+   
 
     .nav-open .options{
         opacity: 1;
@@ -450,9 +448,10 @@
         max-width: 200rem;
     }
     .achieBox{
-        width:23rem;
+        width:25rem;
         height: 20rem;
     }
+
 
 }
 

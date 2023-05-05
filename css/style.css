@@ -514,6 +514,15 @@ flex-direction: column;
     padding-left: 1rem;
 }
 
+#response{
+    background-color: white;
+}
+.styling{
+
+    color: #fff;
+    font-size: 2.4rem;
+}
+
 .Name-line{
     margin-bottom: 2rem;
     height: 7rem;
@@ -548,4 +557,80 @@ flex-direction: column;
 
 .text-selling{
     font-size: 3rem;
+}
+
+.review-box-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.review-box{
+    width: 69rem;
+    box-shadow: 0.2rem 0.2rem 3rem rgba(0,0,0,0.1);
+    background-color: #fff;
+    padding: 2rem;
+    margin: 1.5rem;
+    cursor: pointer;
+}
+
+.review-box:hover{
+    transform: translateY(-10px);
+    transition: all ease 0.3s ;
+}
+
+.review-icon{
+    height: 5rem;
+    width: 5rem;
+    color: #000d3b;
+}
+
+.review-names{
+    font-size: 1.8rem;
+    letter-spacing: 0.5px;
+}
+
+.Review-about{
+    font-size: 1.5rem;
+    color: #979797;
+}
+
+.box-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1rem;
+}
+
+.profile-top{
+    display: flex;
+    gap: 1rem;
+}
+
+.name-what{
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: start;
+}
+
+.reviews{
+    margin-bottom: 3rem;
+    color: #f9d71c;
+    font-size: 1.4rem;
+}
+
+.reviews-comment{
+   font-size: 1.5rem; 
+   color: #4b4b4b;
+   margin-top: 1.5rem;
+
+}
+
+.griding{
+    display: grid;
+    column-gap: 2rem;
+    row-gap: 2rem;
 }
