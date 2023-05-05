@@ -60,7 +60,11 @@ var formData = {
         }
       } else {
         $("#response").empty().append(
+<<<<<<< HEAD
+          '<span style=" font-size: 2em;text-align:center;color:white;">' + data.message + "</span>"
+=======
           '<span class="styling">' + data.message + "</span>"
+>>>>>>> 02b604b234bac2a47814bbc814cd7558c8e57507
         );
         $("#Name").val('');
         $("#number").val('');
@@ -78,7 +82,7 @@ var formData = {
     }).fail(function (data) {
       console.log(data);
       $("#response").empty().append(
-        '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
+        '<span style=" font-size: 2em;text-align:center;">Could not reach server, please try again later.</span>'
       );
     });
 

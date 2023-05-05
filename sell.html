@@ -51,7 +51,7 @@
 <section class="selling">
     <div class="containing">
     <div class="text-selling-box">
-        <h1 class="text-selling-header">Your peronalized market valuation.</h1>
+        <h1 class="text-selling-header">Your personalized market valuation.</h1>
         <p class="text-selling">Let's find the right valuation for your home!</p>
     </div>
 
@@ -60,6 +60,7 @@
         <div class="container-form">
         <form action="postsellform.php" method="POST">
             <textarea placeholder="Tell us about your situation..." id="description" maxlength="5000" class="Message-selling" required></textarea>
+            <div id="descriptionsts"></div>
             <select  id="Valuation-type" required>
                 <option value="">What type of property do you to value?</option>
                 <option value="Single Family">Single Family</option>
@@ -69,6 +70,7 @@
                 <option value="Rental">Rental</option>
                 <option value="Commercial">Commercial</option>
             </select>
+            <div id="valuationsts"></div>
 
             <div class="beds-bathrooms">
                 <select id="Number-of-beds" required>
@@ -88,10 +90,13 @@
                     <option value="4">4</option>
                     <option value="5+">5+</option>
                 </select>
+                <div id="bednbathsts"></div>
             </div>
 
             <input type="text" class="address-line" id="address" maxlength="256" placeholder="Address Line 1" required/>
+            <div id="addresssts"></div>
             <input type="text" class="city-line" id="city" maxlength="256" placeholder="City" required/>
+            <div id="citysts"></div>
             <div class="addressing">
                 <select id="State" required>
                     <option value="">State</option>
@@ -146,13 +151,16 @@
                     <option value="Wyoming">Wyoming</option>
 
                     <input type="text" class="zipcode-line" id="zipcode" maxlength="256" placeholder="Zip Code" required/>
-                    
+                   
                 </select>
+                <div id="statests"></div>
+                <div id="zipcodests"></div>
             </div>
             <input type="text" class="Name-line" id="name" maxlength="256" placeholder="Enter your name" required/>
-                <input type="text" class="email-line" id="email" maxlength="256" placeholder="Enter your email" required/>
-
-                 <input type="submit" value="Value Your Home" class="button-value"/> 
+            <div id="namests"></div>
+            <input type="text" class="email-line" id="email" maxlength="256" placeholder="Enter your email" required/>
+            <div id="emailsts"></div>
+            <input type="submit" value="Value Your Home" class="button-value"/> 
         </form>
     </div>
     </div>
@@ -207,7 +215,7 @@
        </div>
 
       <nav class="nav-col">
-        <p class="footer-heading">Ressources</p>
+        <p class="footer-heading">Resources</p>
         <ul class="footer-nav">
           <li><a href="#" class="footer-link">Create Utilities</a></li>
           <li ><a href="#" class="footer-link">Get Approval</a></li> 
