@@ -26,69 +26,64 @@ $(document).ready(function () {
         if (!data.success) {
             if (data.errors.valuationErr) {
               //$("#name-group").addClass("has-error");
-              $("#Valuation-type").append(
+              $("#valuationsts").append(
                 '<div class="help-block">' + data.errors.valuationErr + "</div>"
               );
             }
 
             if (data.errors.desctiprionErr) {
                 //$("#name-group").addClass("has-error");
-                $("#description").append(
+                $("#descriptionsts").append(
                   '<div class="help-block">' + data.errors.descriptionErr + "</div>"
                 );
               }
     
             if (data.errors.bedErr) {
               //$("#name-group").addClass("has-error");
-              $("#Number-of-beds").append(
+              $("#bednbathsts").append(
                 '<div class="help-block">' + data.errors.numberErr + "</div>"
               );
             }
       
-            if (data.errors.bathErr) {
-              $("#Number-of-baths").append(
-                '<div class="help-block">' + data.errors.emailErr + "</div>"
-              );
-            }
     
             if (data.errors.nameErr) {
-              $("#name").append(
+              $("#namests").append(
                 '<div class="help-block">' + data.errors.nameErr + "</div>"
               );
             }
     
             if (data.errors.cityErr) {
-              $("#city").append(
+              $("#citysts").append(
                 '<div class="help-block">' + data.errors.cityErr + "</div>"
               );
             }
       
             if (data.errors.addressErr) {
-              $("#address").append(
+              $("#addresssts").append(
                 '<div class="help-block">' + data.errors.addressErr + "</div>"
               );
             }
 
             if (data.errors.stateErr) {
-                $("#State").append(
+                $("#statests").append(
                   '<div class="help-block">' + data.errors.stateErr + "</div>"
                 );
               }
 
             if (data.errors.zipErr) {
-                $("#zipcode").append(
+                $("#zipcodests").append(
                   '<div class="help-block">' + data.errors.zipErr + "</div>"
                 );
               }
 
             if (data.errors.emailErr) {
-                $("#email").append(
+                $("#emailsts").append(
                   '<div class="help-block">' + data.errors.emailErr + "</div>"
                 );
               }
           } else {
             $("#response").empty().append(
-              '<div class="alert alert-success">' + data.message + "</div>"
+              '<span style=" font-size: 2em;text-align:center;">' + data.message + "</span>"
             );
             $("#description").val('');
             $("#Valuation-type").val('');
@@ -105,7 +100,7 @@ $(document).ready(function () {
         }).fail(function (data) {
           console.log(data);
           $("#response").empty().append(
-            '<div class="alert alert-danger">Could not reach server, please try again later.</div>'
+            '<span style=" font-size: 2em;">Could not reach server, please try again later.</span>'
           );
         });
     

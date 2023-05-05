@@ -98,14 +98,15 @@ if ($conn->query($sql) === TRUE) {
 }
 
 $conn->close();
-
-$msg2send ="Name: ".$name."\n"."Email: ".$email."\n"." Valuation for ".$beds." beds, ".$baths." baths ".$valuation." at ".$city; 
+$msg2send ="Name: ".$name."\n"."Wants a valuation for ".$beds." beds, ".$baths." baths ".$valuation." at ".$city; 
 
 
 }
+
+}
+
 echo json_encode($data);
 sendmessage($msg2send,$form);
-}
 
 function test_input($fielddata) {
   $fielddata = trim($fielddata);
