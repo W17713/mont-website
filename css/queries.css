@@ -10,7 +10,7 @@
 
   .btn-btn:link,
   .btn-btn:visited {
-    width: 55%;
+    width: 60%;
   }
 }
 
@@ -130,7 +130,7 @@
     font-size: 1.5rem;
   }
   .card-info {
-    font-size: 1.1rem;
+    font-size: 0.8rem;
   }
 
   .card-title {
@@ -281,7 +281,7 @@
   }
 
   .card-info {
-    font-size: 1rem;
+    font-size: 0.7rem;
   }
 
   .btn-btn:link,
@@ -317,7 +317,7 @@
   }
 
   .card-info {
-    font-size: 1.2rem;
+    font-size: 1rem;
   }
 
   .card-title {
@@ -326,7 +326,7 @@
 
   .btn-btn:link,
   .btn-btn:visited {
-    width: 30%;
+    width: 40%;
   }
 
   .card-course {
@@ -585,12 +585,12 @@
   }
 
   .card-info {
-    font-size: 0.6rem;
+    font-size: 0.7rem;
   }
 
   .btn-btn:link,
   .btn-btn:visited {
-    width: 50%;
+    width: 70%;
   }
   .text-selling-box {
     padding-left: 1rem;
@@ -613,7 +613,7 @@
 
   .btn-btn:link,
   .btn-btn:visited {
-    width: 50%;
+    width: 70%;
   }
 
   .grid {
@@ -711,7 +711,7 @@
     } */
 
   .card-info {
-    font-size: 0.6rem;
+    display: none;
   }
 
   .btn-btn:link,
